@@ -111,5 +111,12 @@ export const Wrapper = styled.section`
       text-align: right;
       margin-bottom: 25px;
     }
+
+    .error {
+      text-align: center;
+      font-weight: bold;
+      color: red;
+      padding: 10px;
+    }
   `}
 `;
