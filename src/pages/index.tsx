@@ -1,5 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import { signIn } from 'next-auth/react';
 
 const Home: React.FC = () => {
   return (
@@ -8,9 +9,18 @@ const Home: React.FC = () => {
         <title>Create Next App</title>
       </Head>
 
-      <main></main>
+      <main>
+        <button
+          onClick={() => {
+            signIn();
+          }}
+        >
+          Login
+        </button>
+      </main>
+      <footer></footer>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
