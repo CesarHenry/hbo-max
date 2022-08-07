@@ -1,6 +1,11 @@
 const theme = {
   colors: {
-    GRADIENT: 'linear-gradient(to right, #AE45FA 10%, #4B1AC8, #4178D7)'
+    GRADIENT: 'linear-gradient(to right, #AE45FA 10%, #4B1AC8, #4178D7)',
+    GRADIENT_LOADING: 'linear-gradient(to right, #00305C, #4B1AC8, #40137A)',
+    GRADIENT_PROFILE: 'linear-gradient(to top left,#00305C, #40137A, #0F0F0F)',
+    WHITE: '#FFFF',
+    BLUE: '#0DB8DE',
+    PURPLE: '#9E86FF'
   },
   border: {
     radius: {
@@ -20,7 +25,7 @@ const theme = {
   },
   font: {
     family: {
-      MAIN: 'Poppins, sans-serif',
+      MAIN: 'Sintony, sans-serif',
       SECONDARY: `'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`
     },
     weight: {
@@ -41,6 +46,6 @@ const theme = {
       XXLARGE: '2.8rem'
     }
   }
-}
+};
 
-export default theme
+export default theme;

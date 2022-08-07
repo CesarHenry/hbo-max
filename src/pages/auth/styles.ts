@@ -31,12 +31,24 @@ export const Wrapper = styled.section`
       padding: 0 30px;
     }
 
-    input[type='text'] {
+    .form__group {
+      margin-bottom: 20px;
+      outline: 0px;
+    }
+
+    .form__label {
+      font-size: 10px;
+      color: #6c6c6c;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    input {
       display: flex;
       width: 100%;
       background-color: #1a2226;
       border: none;
-      border-bottom: 2px solid #0db8de;
+      border-bottom: 2px solid ${theme.colors.BLUE};
       font-size: 1rem;
       border-top: 0px;
       border-radius: 0px;
@@ -45,28 +57,11 @@ export const Wrapper = styled.section`
       color: #ecf0f5;
     }
 
-    input[type='password'] {
-      display: flex;
-      width: 100%;
-      background-color: #1a2226;
-      border: none;
-      border-bottom: 2px solid #0db8de;
-      font-weight: bold;
-      padding: 5px;
-      outline: 0;
-      color: #ecf0f5;
-    }
-
-    .form__group {
-      margin-bottom: 20px;
-      outline: 0px;
-    }
-
     .form__control:focus {
       border-color: inherit;
       -webkit-box-shadow: none;
       box-shadow: none;
-      border-bottom: 2px solid #0db8de;
+      border-bottom: 2px solid ${theme.colors.BLUE};
       outline: 0;
       background-color: #1a2226;
       color: #ecf0f5;
@@ -77,23 +72,17 @@ export const Wrapper = styled.section`
       box-shadow: 0 0 0;
     }
 
-    .form__label {
-      font-size: 10px;
-      color: #6c6c6c;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
     button {
       background: transparent;
       width: 100px;
       height: 50px;
       margin: 20px 0;
+      cursor: pointer;
     }
 
     .btn-outline-primary {
-      border-color: #0db8de;
-      color: #0db8de;
+      border-color: ${theme.colors.BLUE};
+      color: ${theme.colors.BLUE};
       border-radius: 0px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -101,7 +90,7 @@ export const Wrapper = styled.section`
     }
 
     .btn-outline-primary:hover {
-      background-color: #0db8de;
+      background: ${theme.colors.BLUE};
       color: white;
     }
 
@@ -110,6 +99,12 @@ export const Wrapper = styled.section`
       padding-right: 0px;
       text-align: right;
       margin-bottom: 25px;
+    }
+
+    .return {
+      justify-content: flex-end;
+      color: ${theme.colors.BLUE};
+      font-size: 0.9rem;
     }
 
     .error {

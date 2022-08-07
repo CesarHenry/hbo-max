@@ -1,25 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
-import { signIn } from 'next-auth/react';
+import { SectionHome } from '../components/core';
+import { Container } from '../styles/Grid';
+import { Header } from '../components/layout';
+import * as Styled from './styles';
 
 const Home: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
+    <Container>
+      <Styled.Wrapper>
+        <Head>
+          <title>HBO Max</title>
+        </Head>
 
-      <main>
-        <button
-          onClick={() => {
-            signIn();
-          }}
-        >
-          Login
-        </button>
-      </main>
-      <footer></footer>
-    </>
+        <Header />
+        <div className="banner">
+          <SectionHome />
+        </div>
+      </Styled.Wrapper>
+    </Container>
   );
 };
 
