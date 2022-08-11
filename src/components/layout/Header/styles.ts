@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.header`
   ${({ theme }) => css`
     .main__menu {
       height: 150px;
