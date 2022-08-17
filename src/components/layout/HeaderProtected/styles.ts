@@ -2,13 +2,18 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
+    position: fixed;
     background: transparent;
+    z-index: 99;
+    display: flex;
+    align-items: center;
 
     .main__menu {
-      display: flex;
+      display: grid;
+      grid-template-columns: 4fr 4fr 1fr;
+      grid-template-rows: 1fr;
       align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
+      padding: 15px 0;
     }
 
     .actions {
@@ -21,7 +26,7 @@ export const Wrapper = styled.header`
     }
 
     button {
-      background-color: inherit;
+      background: inherit;
       padding: 0;
       border: none;
       cursor: pointer;

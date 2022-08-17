@@ -8,7 +8,7 @@ import { Container } from '../../../styles/Grid';
 const SliderWeLove = () => {
   const settings: SwiperProps = {
     spaceBetween: 10,
-    slidesPerView: 6,
+    slidesPerView: 6.5,
     navigation: true
   };
   return (

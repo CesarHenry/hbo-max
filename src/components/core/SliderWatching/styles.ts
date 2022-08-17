@@ -2,8 +2,11 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    color: ${theme.colors.WHITE};
+
     .content {
       width: 100%;
+      margin-top: 80px;
 
       h1 {
         margin-bottom: 10px;
@@ -14,6 +17,5 @@ export const Wrapper = styled.section`
         border-radius: 5px;
       }
     }
-    color: white;
   `}
 `;

@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@types/prop-types": "^15.7.5",
+    "axios": "^0.27.2",
     "next": "12.2.3",
     "next-auth": "^4.10.3",
+    "query-string": "^7.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.5",

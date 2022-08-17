@@ -2,11 +2,11 @@ import Link from 'next/link';
 import React, { ReactElement, ReactNode } from 'react';
 import * as Styled from './styles';
 
-interface ButtonProfileProps {
+interface ButtonProps{
   children: ReactNode;
 }
 
-const ButtonProfile = ({ children }: ButtonProfileProps): ReactElement => {
+const Button = ({ children }: ButtonProps): ReactElement => {
   return (
     <Styled.Wrapper>
       <Link href="#">
@@ -18,4 +18,4 @@ const ButtonProfile = ({ children }: ButtonProfileProps): ReactElement => {
   );
 };
 
-export default ButtonProfile;
+export default Button;

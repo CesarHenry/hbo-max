@@ -7,6 +7,7 @@ const theme = {
     WHITE: '#FFFF',
     LIGHT: '#C8C8C8',
     BLUE: '#0DB8DE',
+    BLACK: '#000',
     PURPLE: '#9E86FF'
   },
   border: {
