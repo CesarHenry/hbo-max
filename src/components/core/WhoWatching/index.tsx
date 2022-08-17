@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container } from '../../../styles/Grid';
 import ButtonProfile from '../ButtonProfile';
@@ -14,10 +15,12 @@ const WhoWatching = () => {
           </div>
           <div className="profiles">
             <div className="profile">
-              <img
-                src="images/icons/Profile_male.svg"
-                alt="icon profile male"
-              />
+              <Link href='/home-protected'>
+                <img
+                  src="images/icons/Profile_male.svg"
+                  alt="icon profile male"
+                />
+              </Link>
               <h3>Jon Snow</h3>
             </div>
             <div className="profile">
@@ -31,8 +34,14 @@ const WhoWatching = () => {
           </div>
           <div className="manager__profile">
             <div className="manager__buttons">
-              <ButtonProfile label="adulto" />
-              <ButtonProfile label="Kids" />
+              <ButtonProfile>
+                <span>+</span>
+                <label>Adulto</label>
+              </ButtonProfile>
+              <ButtonProfile>
+                <span>+</span>
+                <label>Kids</label>
+              </ButtonProfile>
             </div>
 
             <h3>Perfil Administrador</h3>

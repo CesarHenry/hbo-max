@@ -6,7 +6,6 @@ export const Wrapper = styled.section`
       position: absolute;
       width: 100%;
       top: 0;
-      z-index: -1;
     }
 
     .infos {

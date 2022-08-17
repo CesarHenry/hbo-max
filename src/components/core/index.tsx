@@ -4,8 +4,10 @@ import Loading from './Loading';
 import WhoWatching from './WhoWatching';
 import ButtonProfile from './ButtonProfile';
 import Banner from './Banner';
-import SliderTrending from './SliderTrending';
 import SliderWeLove from './SliderWeLove';
+import SliderWatching from './SliderWatching';
+import SliderSeries from './SliderSeries';
+import Button from './Button';
 
 export {
   Input,
@@ -14,6 +16,8 @@ export {
   WhoWatching,
   ButtonProfile,
   Banner,
-  SliderTrending,
-  SliderWeLove
+  SliderWeLove,
+  SliderWatching,
+  SliderSeries,
+  Button
 };
