@@ -1,4 +1,4 @@
-const api_key = '9cfdbdaa00f13b9fa6c00efad88bbaab';
+export const api_key = '9cfdbdaa00f13b9fa6c00efad88bbaab';
 
 export default {
   Trending: `/trending/all/day?api_key=${api_key}&language=pt-BR`,
@@ -11,5 +11,8 @@ export default {
   SciFi: `/discover/movie?api_key=${api_key}&with_genres=878`,
   Western: `/discover/movie?api_key=${api_key}&with_genres=37`,
   Animation: `/discover/movie?api_key=${api_key}&with_genres=16`,
-  Tv: `/discover/movie?api_key=${api_key}&with_genres=10770`
+  Tv: `/discover/movie?api_key=${api_key}&with_genres=10770`,
+  Video: `/videos?api_key=${api_key}&language=en-US`,
+  Serie: `tv/top_rated?api_key=${api_key}&language=pt-BR&page=10`,
+  Star: `tv/1399/credits?api_key=${api_key}&language=en-US`
 };

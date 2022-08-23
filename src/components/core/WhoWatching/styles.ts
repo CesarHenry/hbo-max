@@ -32,10 +32,10 @@ export const Wrapper = styled.section`
 
     .profiles {
       width: 400px;
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 150px 0;
 
       h3 {
         color: ${theme.colors.WHITE};
@@ -69,6 +69,34 @@ export const Wrapper = styled.section`
       flex-wrap: wrap;
       justify-content: center;
       column-gap: 20px;
+    }
+
+    button {
+      border: none;
+      width: 180px;
+      height: 35px;
+
+      text-transform: uppercase;
+      background: ${theme.colors.BLACK_OPACITY};
+      font-size: 1rem;
+      font-weight: 700;
+      color: ${theme.colors.WHITE};
+      cursor: pointer;
+
+      span {
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: ${theme.media.MD}) {

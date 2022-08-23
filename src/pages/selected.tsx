@@ -1,15 +1,14 @@
 import React from 'react';
-import { Footer, HeaderProtected } from '../components/layout';
+import { Footer } from '../components/layout';
 import { PosterSelected } from '../components/shared';
-
-import * as Styled from './styles';
+import Base from '../templates/Base';
 
 const Selected = () => {
   return (
-    <Styled.WrapperSelected>
-      <HeaderProtected />
+    <Base title='Page Movie' backgroundColor='primary'>
       <PosterSelected />
-    </Styled.WrapperSelected>
+      <Footer />
+    </Base>
   );
 };
 

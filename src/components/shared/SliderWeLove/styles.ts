@@ -6,7 +6,7 @@ export const Wrapper = styled.section`
 
     .content {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 80px;
 
       h1 {
         margin-bottom: 10px;
@@ -16,6 +16,11 @@ export const Wrapper = styled.section`
       img {
         border-radius: 5px;
       }
+    }
+
+    img:hover {
+      border: 2px solid white;
+      cursor: pointer;
     }
   `}
 `;

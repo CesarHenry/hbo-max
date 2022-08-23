@@ -19,16 +19,5 @@ export const Wrapper = styled.section`
   `}
 `;
 
-export const WrapperHome = styled.section`
-  ${({ theme }) => css`
-    position: relative;
-    background: ${theme.colors.GRADIENT_PROFILE};
-  `}
-`;
 
-export const WrapperSelected = styled.section`
-  ${({ theme }) => css`
-    position: relative;
-    background: ${theme.colors.BLACK};
-  `}
-`;
+

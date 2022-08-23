@@ -6,7 +6,7 @@ export const Wrapper = styled.footer`
     align-items: center;
     justify-content: center;
     column-gap: 30px;
-    padding: 20px 0;
+    padding: 10px 0;
     color: ${theme.colors.WHITE};
 
     .content {
@@ -28,6 +28,57 @@ export const Wrapper = styled.footer`
       h3 {
         font-weight: 400;
         margin-left: 10px;
+      }
+    }
+
+    .image {
+      img {
+        width: 300px;
+      }
+    }
+
+    button {
+      width: 120px;
+      color: ${theme.colors.WHITE};
+      background: ${theme.colors.GRADIENT_BLUE};
+      font-weight: 700;
+      letter-spacing: 0.5px;
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    button:hover {
+      background: ${theme.colors.BLACK_OPACITY};
+    }
+
+    @media (max-width: ${theme.media.MD}) {
+      flex-direction: column;
+
+      .logo {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          display: none;
+        }
+      }
+
+      button {
+        display: none;
+      }
+
+      .content {
+        &__play {
+          display: none;
+        }
+      }
+
+      .image {
+        img {
+          width: 250px;
+        }
       }
     }
   `}

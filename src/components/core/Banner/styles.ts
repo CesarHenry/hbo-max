@@ -4,8 +4,11 @@ export const Wrapper = styled.section`
   ${({ theme }) => css`
     .background {
       position: absolute;
-      width: 100%;
       top: 0;
+
+      img {
+        width: 100vw;
+      }
     }
 
     .infos {
@@ -14,11 +17,16 @@ export const Wrapper = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      img {
+        z-index: 99;
+      }
     }
 
     .content {
       color: ${theme.colors.WHITE};
       margin-top: 30px;
+      z-index: 99;
 
       h2 {
         font-size: 1.4rem;
@@ -45,6 +53,7 @@ export const Wrapper = styled.section`
           border: none;
           background: ${theme.colors.GRADIENT_BLUE};
           margin-right: 20px;
+          z-index: 99;
         }
 
         .more__info {
@@ -60,6 +69,7 @@ export const Wrapper = styled.section`
           border: none;
           text-transform: uppercase;
           border-radius: 20px;
+          z-index: 99;
         }
       }
     }

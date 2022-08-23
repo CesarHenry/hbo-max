@@ -8,6 +8,8 @@ const theme = {
     LIGHT: '#C8C8C8',
     BLUE: '#0DB8DE',
     BLACK: '#000',
+    BLACK_OPACITY: 'rgba(0, 0, 0, 0.3)',
+    GOLD: '#ffbf00',
     PURPLE: '#9E86FF'
   },
   border: {
