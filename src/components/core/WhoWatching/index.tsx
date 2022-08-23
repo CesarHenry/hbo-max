@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { Container } from '../../../styles/Grid';
+import Button from '../Button';
 import ButtonProfile from '../ButtonProfile';
 import * as Styled from './styles';
 
@@ -34,14 +35,14 @@ const WhoWatching = () => {
           </div>
           <div className="manager__profile">
             <div className="manager__buttons">
-              <ButtonProfile>
+              <Button>
                 <span>+</span>
                 <label>Adulto</label>
-              </ButtonProfile>
-              <ButtonProfile>
+              </Button>
+              <Button>
                 <span>+</span>
                 <label>Kids</label>
-              </ButtonProfile>
+              </Button>
             </div>
 
             <h3>Perfil Administrador</h3>

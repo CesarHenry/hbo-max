@@ -27,16 +27,22 @@ export const Wrapper = styled.section`
         margin: 20px 0;
         letter-spacing: 0.5px;
       }
-      button {
-        width: 120px;
-        text-transform: uppercase;
-        border: none;
-        font-size: 1rem;
-        color: ${theme.colors.WHITE};
-        background: ${theme.colors.GRADIENT_LOADING};
-        border-radius: 20px;
-        padding: 10px;
+    }
+
+    button {
+      width: 120px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: ${theme.colors.WHITE};
+      background: ${theme.colors.GRADIENT_BLUE};
+
+      label {
+        cursor: pointer;
       }
+    }
+
+    button:hover {
+      background: ${theme.colors.BLACK_OPACITY};
     }
   `}
 `;

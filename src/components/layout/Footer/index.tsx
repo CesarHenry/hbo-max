@@ -27,7 +27,7 @@ const Footer = () => {
             <label>Assistir</label>
           </Button>
         </div>
-        <div>
+        <div className="image">
           <img src="images/image.png" alt="imagem rebeldes" />
         </div>
       </Styled.Wrapper>
