@@ -2,76 +2,45 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
-    .background {
+    .poster {
+      width: 100%;
+    }
+
+    .card {
       position: absolute;
-      top: 0;
+      bottom: 150px;
+      left: 40px;
+      width: 350px;
+      border-radius: 20px;
+      border: 1px solid ${theme.colors.LIGHT};
+      box-shadow: 3px 3px 10px white;
+    }
 
-      img {
-        width: 100vw;
+    .swiper-pagination-bullet {
+      background: var(
+        --swiper-pagination-bullet-inactive-color,
+        ${theme.colors.WHITE}
+      );
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--swiper-pagination-color, ${theme.colors.PINK});
+    }
+
+    @media (max-width: ${theme.media.XL}) {
+      .card {
+        width: 200px;
       }
     }
 
-    .infos {
-      width: 30%;
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+    @media (max-width: ${theme.media.MD}) {
 
-      img {
-        z-index: 99;
+      .poster {
+        width: 100%;
+        height: 100%;
       }
-    }
-
-    .content {
-      color: ${theme.colors.WHITE};
-      margin-top: 30px;
-      z-index: 99;
-
-      h2 {
-        font-size: 1.4rem;
+      .card {
+        display: none;
       }
-
-      p {
-        font-size: 1rem;
-        letter-spacing: 0.4px;
-        margin-top: 5px;
-      }
-
-      &__play {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-
-        button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: none;
-          background: ${theme.colors.GRADIENT_BLUE};
-          margin-right: 20px;
-          z-index: 99;
-        }
-
-        .more__info {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 120px;
-          height: 35px;
-          letter-spacing: 0.6px;
-          font-weight: bold;
-          background: rgba(255, 255, 255, 0.2);
-          color: ${theme.colors.WHITE};
-          border: none;
-          text-transform: uppercase;
-          border-radius: 20px;
-          z-index: 99;
-        }
-      }
-    }
   `}
 `;

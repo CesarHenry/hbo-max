@@ -39,7 +39,6 @@ const Input = ({
         </label>
 
         <input
-          className="form__control"
           type={type}
           id={name}
           name={name}
@@ -54,6 +53,7 @@ const Input = ({
       </div>
 
       <div className="icon">{icon}</div>
+
       {error && <p className="error">{error}</p>}
     </Styled.Wrapper>
   );

@@ -5,14 +5,13 @@ export const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 100vh;
 
     .login__box {
       display: flex;
       flex-direction: column;
       width: 500px;
-      background: #1a2226;
+      background: ${theme.colors.DARK};
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
 
@@ -23,7 +22,7 @@ export const Wrapper = styled.section`
       letter-spacing: 2px;
       margin-top: 15px;
       font-weight: bold;
-      color: #ecf0f5;
+      color: ${theme.colors.WHITE};
     }
 
     .login__form {
@@ -34,19 +33,19 @@ export const Wrapper = styled.section`
     .form__group {
       margin-bottom: 20px;
       outline: 0px;
+      width: 100%;
     }
 
     .form__label {
       font-size: 10px;
-      color: #6c6c6c;
+      color: ${theme.colors.GREY};
       font-weight: bold;
       letter-spacing: 1px;
     }
 
     input {
-      display: flex;
       width: 100%;
-      background-color: #1a2226;
+      display: flex;
       border: none;
       border-bottom: 2px solid ${theme.colors.BLUE};
       font-size: 1rem;
@@ -54,21 +53,18 @@ export const Wrapper = styled.section`
       border-radius: 0px;
       outline: 0;
       padding: 5px;
-      color: #ecf0f5;
-    }
-
-    .form__control:focus {
-      border-color: inherit;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      border-bottom: 2px solid ${theme.colors.BLUE};
-      outline: 0;
-      background-color: #1a2226;
-      color: #ecf0f5;
+      color: ${theme.colors.WHITE};
+      background: ${theme.colors.DARK};
     }
 
     input:focus {
-      outline: none;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom: 2px solid ${theme.colors.PINK};
+      outline: 0;
+      color: ${theme.colors.WHITE};
+      background: ${theme.colors.DARK};
       box-shadow: 0 0 0;
     }
 
@@ -90,8 +86,9 @@ export const Wrapper = styled.section`
     }
 
     .btn-outline-primary:hover {
-      background: ${theme.colors.BLUE};
-      color: white;
+      background: ${theme.colors.PINK};
+      color: ${theme.colors.WHITE};
+      border-color: ${theme.colors.PINK};
     }
 
     .login__button {
@@ -105,6 +102,10 @@ export const Wrapper = styled.section`
       justify-content: flex-end;
       color: ${theme.colors.BLUE};
       font-size: 0.9rem;
+    }
+
+    .return:hover {
+      color: ${theme.colors.PINK};
     }
 
     .error {

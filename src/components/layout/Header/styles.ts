@@ -37,6 +37,17 @@ export const Wrapper = styled.header`
       background: ${theme.colors.GRADIENT_PROFILE};
     }
 
+    .login {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: ${theme.colors.WHITE};
+        margin-right: 10px;
+        font-weight: 400;
+      }
+    }
+
     @media (max-width: ${theme.media.MD}) {
       .main__menu {
         height: 100px;
@@ -45,7 +56,12 @@ export const Wrapper = styled.header`
       .logo {
         width: 150px;
       }
-    }
 
+      .login {
+        h1 {
+          display: none;
+        }
+      }
+    }
   `}
 `;

@@ -4,7 +4,6 @@ import Loading from './Loading';
 import WhoWatching from './WhoWatching';
 import Banner from './Banner';
 import SliderWatching from './SliderWatching';
-import SliderSeries from './SliderSeries';
 import Button from './Button';
 
 export {
@@ -14,6 +13,5 @@ export {
   WhoWatching,
   Banner,
   SliderWatching,
-  SliderSeries,
   Button
 };

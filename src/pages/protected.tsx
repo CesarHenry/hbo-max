@@ -22,12 +22,9 @@ const Protected: NextPage = (): JSX.Element => {
         {isLoading === true ? (
           <Loading />
         ) : (
-          <div>
+          <>
             <WhoWatching />
-            {/* this page is protected
-            {JSON.stringify(data?.user, null, 2)}
-            <button onClick={() => signOut()}></button> */}
-          </div>
+          </>
         )}
       </>
     );

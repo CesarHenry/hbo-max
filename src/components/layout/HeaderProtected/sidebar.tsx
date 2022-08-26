@@ -16,10 +16,13 @@ const SideBar = ({ isOpen = false, setIsOpen }: SideBarProps): ReactElement => {
     <Styled.Backdrop isOpen={isOpen} onClick={handleToggle}>
       <Styled.WrapperSideBar isOpen={isOpen}>
         <div className="content">
+          <div className="header">
+            <button onClick={handleToggle}>X</button>
+          </div>
           <ul>
             <li>
-              <Link href="#">
-                <a>Home</a>
+              <Link href="/home-protected">
+                <a>Início</a>
               </Link>
             </li>
             <li>

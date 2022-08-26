@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container } from '../../../styles/Grid';
 import { Button } from '../../core';
@@ -29,6 +30,23 @@ const Footer = () => {
         </div>
         <div className="image">
           <img src="images/image.png" alt="imagem rebeldes" />
+        </div>
+        <div className="contact">
+          <Link href="https://github.com/CesarHenry">
+            <a className="github" target="_blank">
+              <img src="images/icons/icon_github.png" alt="icon github" />
+            </a>
+          </Link>
+          <Link href="https://www.linkedin.com/in/cesar-henry/">
+            <a className="linkedin" target="_blank">
+              <img src="images/icons/icon_linkedin.png" alt="icon linkedin" />
+            </a>
+          </Link>
+          <Link href="https://www.instagram.com/cesaar_henry/">
+            <a className="instagram" target="_blank">
+              <img src="images/icons/icon_instagram.png" alt="icon instagram" />
+            </a>
+          </Link>
         </div>
       </Styled.Wrapper>
     </Container>

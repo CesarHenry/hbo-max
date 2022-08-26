@@ -1,22 +1,34 @@
 import React from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+import 'swiper/css/navigation';
 import 'swiper/css';
-
-import * as Styled from './styles';
 import { Container } from '../../../styles/Grid';
 
+import * as Styled from './styles';
+
+const settings: SwiperProps = {
+  slidesPerView: 2.5,
+  spaceBetween: 5,
+  navigation: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 4.5,
+      spaceBetween: 10
+    },
+    1024: {
+      slidesPerView: 5.5,
+      spaceBetween: 10
+    }
+  }
+};
 const SliderWatching = () => {
-  const settings: SwiperProps = {
-    spaceBetween: 10,
-    slidesPerView: 6,
-    navigation: true
-  };
   return (
     <Container>
       <Styled.Wrapper>
         <div className="content">
           <h1>Continue Assistindo »</h1>
-          <Swiper {...settings}>
+          <Swiper {...settings} modules={[Navigation]}>
             <SwiperSlide>
               <img
                 src="images/cards/card_watching_friends.png"
@@ -32,6 +44,30 @@ const SliderWatching = () => {
             <SwiperSlide>
               <img
                 src="images/cards/card_watching_mem.png"
+                alt="card watching movies"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="images/cards/card_watching_batman.png"
+                alt="card watching movies"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="images/cards/card_watching_batman.png"
+                alt="card watching movies"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="images/cards/card_watching_batman.png"
+                alt="card watching movies"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="images/cards/card_watching_batman.png"
                 alt="card watching movies"
               />
             </SwiperSlide>

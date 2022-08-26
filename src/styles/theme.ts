@@ -4,13 +4,16 @@ const theme = {
     GRADIENT_BLUE: 'linear-gradient(to right, #4710C1, #7857FF, #819BFD)',
     GRADIENT_LOADING: 'linear-gradient(to right, #00305C, #4B1AC8, #40137A)',
     GRADIENT_PROFILE: 'linear-gradient(to top left,#00305C, #40137A, #0F0F0F)',
-    WHITE: '#FFFF',
-    LIGHT: '#C8C8C8',
     BLUE: '#0DB8DE',
     BLACK: '#000',
-    BLACK_OPACITY: 'rgba(0, 0, 0, 0.3)',
+    BLACK_OPACITY: 'rgba(0, 0, 0, 0.5)',
+    DARK: '#1A2226',
     GOLD: '#ffbf00',
-    PURPLE: '#9E86FF'
+    GREY: '#6C6C6C',
+    LIGHT: '#C8C8C8',
+    PINK: '#FC00C4',
+    PURPLE: '#9E86FF',
+    WHITE: '#FFFF'
   },
   border: {
     radius: {

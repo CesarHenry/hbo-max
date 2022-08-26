@@ -1,33 +1,69 @@
-import Link from 'next/link';
 import React from 'react';
-import { Container } from '../../../styles/Grid';
+import Link from 'next/link';
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css';
+
 import * as Styled from './styles';
+import instance from '../../../services/api';
+import requests from '../../../services/requests';
+
+const settings: SwiperProps = {
+  slidesPerView: 1,
+  spaceBetween: 5,
+  autoplay: {
+    delay: 5000
+  },
+  pagination: {
+    dynamicBullets: true
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    }
+  }
+};
 
 const Banner = () => {
+  const [movies, setMovies] = React.useState([]);
+
+  React.useEffect(() => {
+    instance.get(requests.NowPlaying).then((res) => {
+      setMovies(res.data.results);
+    });
+  }, []);
+
+  console.log(movies);
+
   return (
     <Styled.Wrapper>
-      <div className="background">
-        <img src="images/cover_friends.png" alt="banner home" />
-      </div>
-      <Container>
-        <div className="infos">
-          <img src="images/icons/logo_friends.svg" alt="logo friends" />
-          <div className="content">
-            <h2>Assistir Agora</h2>
-            <p>Eles estão de volta ao Central Park, por uma noite apenas.</p>
-          </div>
-          <div className="content__play">
-            <button>
-              <img src="images/icons/vector.svg" alt="icon arrow" />
-            </button>
-            <Link href="#">
-              <div className="more__info">
-                <a>Saiba Mais</a>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </Container>
+      <Swiper {...settings} modules={[Autoplay, Pagination]}>
+        {movies.map((value, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <img
+                className="card"
+                src={`${requests.image_url}${value.poster_path}`}
+                alt={value.title}
+              />
+
+              <img
+                className="poster"
+                src={`${requests.image_url}${value.backdrop_path}`}
+                alt={value.title}
+                width="1280"
+                height="820"
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </Styled.Wrapper>
   );
 };

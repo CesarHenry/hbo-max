@@ -1,11 +1,12 @@
 import React, { FormEventHandler } from 'react';
 import { NextPage } from 'next';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 import * as Styled from './styles';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Container } from '../../styles/Grid';
 import { Input } from '../../components/core';
+import { Header } from '../../components/layout';
 
 interface Props {}
 
@@ -14,6 +15,7 @@ const SignIn: NextPage = (props): JSX.Element => {
   const [error, setError] = React.useState(null);
 
   const router = useRouter();
+  const { status } = useSession();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     //validate userinfo
@@ -33,6 +35,12 @@ const SignIn: NextPage = (props): JSX.Element => {
     if (res.url) router.push(res.url);
   };
 
+
+    React.useEffect(() => {
+      if (status === 'unauthenticated') router.push('/auth/signin');
+    }, [status]);
+
+    if (status === 'authenticated') router.push('/protected');
   return (
     <Container>
       <Styled.Wrapper>

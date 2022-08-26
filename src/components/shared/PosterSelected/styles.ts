@@ -2,108 +2,148 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
-    .poster {
-      position: absolute;
-      top: 0;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 100px;
+    }
 
+    .poster {
+      width: 50%;
       img {
-        width: 100vw;
-        height: 100vh;
+        width: 500px;
       }
     }
 
-    .content {
-      width: 500px;
-      height: 80vh;
+    .infos {
+      width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-
-      p {
-        color: ${theme.colors.WHITE};
-        background: ${theme.colors.BLACK_OPACITY};
-        letter-spacing: 1px;
-        padding: 30px;
-        border-radius: 0px 0px 30px 30px;
-        z-index: 1;
-      }
+      justify-content: center;
+      background: ${theme.colors.BLACK_OPACITY};
+      padding: 0 20px;
     }
 
     .title {
+      font-size: 2rem;
+      color: ${theme.colors.GOLD};
+      text-shadow: 1px 1px 2px ${theme.colors.BLUE};
+    }
+
+    .release {
+      width: 400px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      background: ${theme.colors.BLACK_OPACITY};
-      padding: 20px;
-      border-radius: 30px 30px 0px 0px;
-      z-index: 1;
+      color: white;
+      text-transform: capitalize;
+      margin: 20px 0;
+
+      h1,
+      h3 {
+        font-size: 1.2rem;
+        color: ${theme.colors.PURPLE};
+      }
+    }
+
+    .sinopse {
+      padding: 0 20px;
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
+        color: ${theme.colors.GOLD};
+      }
+
+      p {
+        font-size: 1.4rem;
+        text-align: justify;
         color: ${theme.colors.WHITE};
+        margin: 10px 0;
       }
     }
 
     .vote {
+      color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: ${theme.colors.LIGHT};
-      z-index: 1;
+      justify-content: flex-end;
 
-      img {
-        margin: 10px;
+      h1 {
+        font-size: 1.2rem;
+        color: ${theme.colors.PURPLE};
+        margin-right: 20px;
       }
     }
 
     .container__vote {
-      width: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: ${theme.colors.GRADIENT_PROFILE};
-      border-radius: 10px;
+      width: 60px;
+      height: 60px;
+      font-size: 0.9rem;
+      border-radius: 50%;
+      background: ${theme.colors.GRADIENT_BLUE};
+      color: ${theme.colors.WHITE};
+      margin: 10px 0;
     }
 
     .videos {
-      position: relative;
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      margin: 30px 0;
       column-gap: 10px;
-
-      iframe {
-        border-radius: 10px;
-      }
+      padding: 30px 0;
     }
 
     @media (max-width: ${theme.media.MD}) {
-      .poster {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
       .content {
         width: 100%;
-        height: 150px;
+        flex-direction: column;
+      }
 
-        p {
-          display: none;
+      .poster {
+        width: 100%;
+      }
+
+      .infos {
+        width: 100%;
+
+        h1 {
+          font-size: 2rem;
         }
       }
 
-      .title {
-        border-radius: 20px;
-
+      .release {
+        width: 100%;
+        flex-direction: column;
         h1 {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .sinopse {
+        h1 {
+          font-size: 1.4rem;
+        }
+
+        p {
+          font-size: 1rem;
         }
       }
 
       .vote {
-        display: none;
+        h1 {
+          font-size: 1.4rem;
+        }
       }
-    }
+
+
+
   `}
 `;

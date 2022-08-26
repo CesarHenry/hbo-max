@@ -2,10 +2,9 @@ import React from 'react';
 import {
   Banner,
   Loading,
-  SliderSeries,
   SliderWatching
 } from '../components/core';
-import { SliderTrending, SliderWeLove, StarPower } from '../components/shared';
+import { SliderTrending, SliderWeLove, StarPower, SliderSeries } from '../components/shared';
 import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 
@@ -26,7 +25,7 @@ const HomeProtected = () => {
 
   if (status === 'authenticated')
     return (
-      <Base backgroundColor="secondary">
+      <Base backgroundColor={'linear-gradient(to top left,#00305C, #40137A, #0F0F0F)'}>
         {isLoading === true ? (
           <Loading />
         ) : (
