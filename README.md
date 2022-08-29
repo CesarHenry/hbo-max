@@ -1,7 +1,25 @@
 <h1 align="center"> HBO MAX </h1>
-<p>Projeto extraido da comunidade figma, web site criado em Nextjs </p>
+
+<h3>⚠️ Acesso </h3> 
+
+<h3> <kbd>User: <kbd>admin</kbd> | Senha: <kbd>admin</kbd></kbd></h3>
+
+
+* Projeto extraido da comunidade figma 
+* Web site criado em Nextjs
+* Criado um sistema de login para a navegação no site 
+* Utilizado API do The Movie Database
+
 
 ![HBO MAX Clone (Community)](https://user-images.githubusercontent.com/86115647/187293584-1effebc6-b703-44f0-86e5-3c68896f39e7.png)
+
+<h3>Estrutura Código</h3>
+
+> Core: componentes que pode se repetir e não tem nenhuma lógica dentro
+
+> Layout: coisas que são fixo na tela
+
+> Shared: componentes que se repetem, mas tem lógicas específicas dentro do componente
 
 ---
 
