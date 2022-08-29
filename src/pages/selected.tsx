@@ -5,7 +5,7 @@ import Base from '../templates/Base';
 
 const Selected = () => {
   return (
-    <Base title='Page Movie' backgroundColor='primary'>
+    <Base title='Page Movie' backgroundColor={'linear-gradient(to top left,#00305C, #40137A, #0F0F0F)'}>
       <PosterSelected />
       <Footer />
     </Base>

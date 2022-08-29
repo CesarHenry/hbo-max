@@ -2,10 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
-    overflow: hidden;
-
     .content {
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -13,12 +10,13 @@ export const Wrapper = styled.section`
     }
 
     .primary {
+      position: relative;
       display: flex;
       justify-content: center;
       z-index: 1;
 
       img {
-        width: 80%;
+        width: 100%;
       }
     }
 
@@ -28,12 +26,11 @@ export const Wrapper = styled.section`
       justify-content: center;
 
       img {
-        width: 50%;
+        width: 70%;
       }
     }
 
     @media (max-width: ${theme.media.MD}) {
-      overflow: scroll;
       height: 80vh;
 
       .content {
@@ -59,7 +56,6 @@ export const Wrapper = styled.section`
           border-radius: 10px;
         }
       }
-
     }
   `}
 `;

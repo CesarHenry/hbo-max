@@ -53,6 +53,27 @@ export const Wrapper = styled.footer`
       background: ${theme.colors.BLACK_OPACITY};
     }
 
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .github {
+        width: 45px;
+        padding: 5px;
+      }
+
+      .linkedin {
+        width: 65px;
+        padding: 10px;
+      }
+
+      .instagram {
+        width: 60px;
+      }
+    }
+
     @media (max-width: ${theme.media.MD}) {
       flex-direction: column;
 
@@ -77,8 +98,12 @@ export const Wrapper = styled.footer`
 
       .image {
         img {
-          width: 250px;
+          width: 200px;
         }
+      }
+
+      .contact {
+        flex-direction: row;
       }
     }
   `}

@@ -13,6 +13,7 @@ const Header = () => {
             <img src="images/icons/logo.svg" alt="logo hbo-max" />
           </div>
           <nav className="login">
+            <h1>Login</h1>
             <button
               onClick={() => {
                 signIn();

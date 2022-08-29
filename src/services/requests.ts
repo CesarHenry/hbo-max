@@ -1,8 +1,11 @@
 export const api_key = '9cfdbdaa00f13b9fa6c00efad88bbaab';
 
+const number = Math.floor(Math.random() * 10 + 1);
+
 export default {
-  Trending: `/trending/all/day?api_key=${api_key}&language=pt-BR`,
-  TopRated: `/movie/top_rated?api_key=${api_key}&language=pt-BR&page=1`,
+  image_url: 'https://image.tmdb.org/t/p/original',
+  Trending: `/trending/all/day?api_key=${api_key}&language=pt-BR&page=${number}`,
+  TopRated: `/movie/top_rated?api_key=${api_key}&language=pt-BR&page=${number}`,
   ActionMovies: `/discover/movie?api_key=${api_key}&with_genres=28&language=pt-BR`,
   ComedyMovies: `/discover/movie?api_key=${api_key}&with_genres=35&language=pt-BR`,
   HorrorMovies: `/discover/movie?api_key=${api_key}&with_genres=27`,
@@ -12,7 +15,9 @@ export default {
   Western: `/discover/movie?api_key=${api_key}&with_genres=37`,
   Animation: `/discover/movie?api_key=${api_key}&with_genres=16`,
   Tv: `/discover/movie?api_key=${api_key}&with_genres=10770`,
-  Video: `/videos?api_key=${api_key}&language=en-US`,
-  Serie: `tv/top_rated?api_key=${api_key}&language=pt-BR&page=10`,
-  Star: `tv/1399/credits?api_key=${api_key}&language=en-US`
+  Serie: `/tv/top_rated?api_key=${api_key}&language=pt-BR&page=${number}`,
+  Star: `/tv/1399/credits?api_key=${api_key}&language=en-US`,
+  Search: `/search/movie?api_key=${api_key}&query=`,
+  Popular: `/movie/popular?api_key=${api_key}&language=pt-BR&page=${number}`,
+  NowPlaying: `/movie/now_playing?api_key=${api_key}&language=en-US&page=2`
 };

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import { Container } from '../../../styles/Grid';
 import Button from '../Button';
-import ButtonProfile from '../ButtonProfile';
 import * as Styled from './styles';
 
 const WhoWatching = () => {

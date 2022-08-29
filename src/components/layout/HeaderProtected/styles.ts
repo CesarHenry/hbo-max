@@ -4,6 +4,10 @@ interface SideBarProps {
   isOpen: boolean;
 }
 
+interface DropdownProps {
+  dropdownOpen: boolean;
+}
+
 export const Wrapper = styled.header`
   ${({ theme }) => css`
     width: 100%;
@@ -49,6 +53,7 @@ export const Wrapper = styled.header`
     }
 
     .logo {
+      cursor: pointer;
       img {
         width: 120px;
       }
@@ -94,16 +99,15 @@ export const WrapperSideBar = styled.section<SideBarProps>`
     position: fixed;
     display: flex;
     flex-direction: column;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 100vh;
     left: 0;
     top: 0;
     transform: translateX(-200%);
     transition: all 200ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    border-right: 1px solid ${theme.colors.WHITE};
     background-color: ${theme.colors.BLACK};
-    max-width: 320px;
+    max-width: 300px;
     width: 100%;
     z-index: 999999;
 
@@ -113,8 +117,8 @@ export const WrapperSideBar = styled.section<SideBarProps>`
     .content {
       display: flex;
       align-items: flex-start;
-      padding: 20px;
-      font-size: 1.2rem;
+      padding: 40px 20px;
+      font-size: 1rem;
       height: 80vh;
       overflow: auto;
 
@@ -122,9 +126,9 @@ export const WrapperSideBar = styled.section<SideBarProps>`
         display: flex;
         align-items: center;
         width: 250px;
-        height: 50px;
+        height: 45px;
 
-        font-weight: 700;
+        font-weight: 400;
         color: ${theme.colors.WHITE};
         vertical-align: sub;
         display: flex;
@@ -134,7 +138,17 @@ export const WrapperSideBar = styled.section<SideBarProps>`
       }
 
       a:hover {
-        background-color: ${theme.colors.BLUE};
+        background-color: ${theme.colors.PINK};
+      }
+
+      .header {
+        button {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          color: white;
+          padding: 15px;
+        }
       }
 
       @media (max-width: ${theme.media.MD}) {
@@ -162,5 +176,50 @@ export const Backdrop = styled.div<SideBarProps>`
     z-index: 9999;
 
     ${isOpen && 'opacity: 1; visibility: visible;'}
+  `}
+`;
+
+export const Dropdown = styled.div<DropdownProps>`
+  ${({ dropdownOpen }) => css`
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+
+    ${dropdownOpen && 'opacity: 1; visibility: visible;'}
+  `}
+`;
+
+export const WrapperDropdown = styled.div`
+  ${({ theme }) => css`
+    position: relative;
+
+    .nav {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 150px;
+    }
+
+    .dropdown__menu {
+      text-align: center;
+      border-radius: 5px;
+      background: ${theme.colors.BLACK};
+
+      li {
+        padding: 10px;
+      }
+
+      a {
+        color: ${theme.colors.WHITE};
+      }
+    }
+
+    li:hover {
+      background: ${theme.colors.PINK};
+    }
+
+    .logout {
+      border-top: 1px solid ${theme.colors.WHITE};
+    }
   `}
 `;

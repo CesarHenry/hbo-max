@@ -4,11 +4,12 @@ import { Navigation } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css';
 
-import * as Styled from './styles';
 import { Container } from '../../../styles/Grid';
+import Button from '../../core/Button';
+
+import * as Styled from './styles';
 import instance from '../../../services/api';
 import requests from '../../../services/requests';
-import { useRouter } from 'next/router';
 
 const settings: SwiperProps = {
   slidesPerView: 3.5,
@@ -20,42 +21,46 @@ const settings: SwiperProps = {
       spaceBetween: 10
     },
     1024: {
-      slidesPerView: 6.5,
+      slidesPerView: 5.5,
       spaceBetween: 10
     }
   }
 };
 
-const SliderWeLove = () => {
-  const [movies, setMovies] = React.useState([]);
-
-  const router = useRouter();
+const SliderSeries = () => {
+  const [series, setSeries] = React.useState([]);
 
   React.useEffect(() => {
-    instance.get(requests.TopRated).then((res) => {
-      setMovies(res.data.results);
+    instance.get(requests.Serie).then((res) => {
+      setSeries(res.data.results);
     });
   }, []);
 
-  const handleClick = ({ ...value }) => {
-    return router.push({
-      pathname: '/selected',
-      query: { id: `${value.id}`, page: 'TopRated' }
-    });
-  };
+  console.log(series);
+
   return (
     <Container>
       <Styled.Wrapper>
         <div className="content">
-          <h1>Filmes que amamos »</h1>
+          <div className="information">
+            <h1>
+              Séries Aclamadas <span>»</span>
+            </h1>
+            <p>
+              Seus programas favoritos, personagens amados e histórias
+              inesquecíveis.
+            </p>
+            <Button>
+              <label>Navegar</label>
+            </Button>
+          </div>
           <Swiper {...settings} modules={[Navigation]}>
-            {movies.map((value, index) => {
+            {series.map((value, index) => {
               return (
                 <SwiperSlide key={index}>
                   <img
                     src={`${requests.image_url}${value.poster_path}`}
-                    alt={`card ${value.original_title}`}
-                    onClick={() => handleClick(value)}
+                    alt="card medium movies"
                   />
                 </SwiperSlide>
               );
@@ -67,4 +72,4 @@ const SliderWeLove = () => {
   );
 };
 
-export default SliderWeLove;
+export default SliderSeries;
