@@ -1,4 +1,4 @@
-<h1 align="center"> HBO MAX </h1> 
+<h1 align="center">HBO MAX 🎞</h1> 
 
 
 
