@@ -1,13 +1,11 @@
 <h1 align="center">HBO MAX 🎞</h1> 
 
+<h3>⚠️ Access : <kbd>User: <kbd>admin</kbd> | Senha: <kbd>admin</kbd></kbd></h3>
 
-
-<h3>⚠️ Acesso : <kbd>User: <kbd>admin</kbd> | Senha: <kbd>admin</kbd></kbd></h3>
-
-* Projeto extraido <a href="https://www.figma.com/community/file/994715668716699770" target="_blank">Figma Community</a>
-* Web site criado em React | Nextjs
-* Criado um sistema de login para a navegação no site 
-* Interação de filmes e séries utilizando **Api** - <a href="https://developers.themoviedb.org/3/getting-started/introduction"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" width="120" height="10"></a>
+* Extracted project <a href="https://www.figma.com/community/file/994715668716699770">Figma Community</a>
+* Web site created in React | Nextjs
+* Created a login system for site navigation
+* Interaction of movies and series using **Api** - <a href="https://developers.themoviedb.org/3/getting-started/introduction"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" width="120" height="10"></a>
 
 
 ![HBO MAX Clone (Community)](https://user-images.githubusercontent.com/86115647/187293584-1effebc6-b703-44f0-86e5-3c68896f39e7.png)
@@ -74,8 +72,3 @@ Made ❤️ by César Henrique 👋🏽 contact me!
 [![Linkedin Badge](https://img.shields.io/badge/-César-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/cesar-henry/)](https://www.linkedin.com/in/cesar-henry/) 
 [![Email Badge](https://img.shields.io/badge/-cesar_rasec89@hotmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:cesar_rasec89@hotmail.com)](mailto:cesar_rasec89@hotmail.com)
 ![Playstation Badge](https://img.shields.io/badge/XMagnos-003791?style=flat-square&logo=playstation&logoColor=white&link=https://www.playstation.com/pt-br/playstation-network/)
-
-
-
-
-
