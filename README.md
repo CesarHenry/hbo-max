@@ -1,6 +1,6 @@
 <h1 align="center">HBO MAX 🎞</h1> 
 
-<h3>⚠️ Access : <kbd>User: <kbd>admin</kbd> | Senha: <kbd>admin</kbd></kbd></h3>
+<h3>⚠️ Access : <kbd>User: <kbd>admin</kbd> | Password: <kbd>admin</kbd></kbd></h3>
 
 * Extracted project <a href="https://www.figma.com/community/file/994715668716699770">Figma Community</a>
 * Web site created in React | Nextjs
