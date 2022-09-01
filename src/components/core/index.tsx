@@ -5,6 +5,7 @@ import WhoWatching from './WhoWatching';
 import Banner from './Banner';
 import SliderWatching from './SliderWatching';
 import Button from './Button';
+import RingProgress from './RingProgress';
 
 export {
   Input,
@@ -13,5 +14,6 @@ export {
   WhoWatching,
   Banner,
   SliderWatching,
-  Button
+  Button,
+  RingProgress
 };
