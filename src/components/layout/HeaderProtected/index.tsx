@@ -7,15 +7,15 @@ import * as Styled from './styles';
 
 const HeaderProtected = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [dropdownOpen, setDropdownIsOpen] = React.useState(false);
+  const [dropdown, setDropdown] = React.useState(false);
 
   return (
     <Styled.Wrapper>
       <Container>
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
         <Dropdown
-          dropdownOpen={dropdownOpen}
-          setDropdownIsOpen={setDropdownIsOpen}
+          dropdown={dropdown}
+          setDropdown={setDropdown}
         />
 
         <main className="main__menu">
@@ -38,7 +38,7 @@ const HeaderProtected = () => {
           </div>
           <div className="icon__profile">
             <button
-              onClick={() => setDropdownIsOpen(!dropdownOpen)}
+              onClick={() => setDropdown(!dropdown)}
               type="button"
             >
               <img src="images/icons/profile_male.svg" alt="icon user" />

@@ -5,22 +5,17 @@ import React, { ReactElement } from 'react';
 import * as Styled from './styles';
 
 interface DropdownProps {
-  dropdownOpen: boolean;
-  setDropdownIsOpen: (value: boolean) => void;
+  dropdown: boolean;
+  setDropdown: (value: boolean) => void;
 }
 
-const Dropdown = ({
-  dropdownOpen = false,
-  setDropdownIsOpen
-}: DropdownProps): ReactElement => {
+const Dropdown = ({ dropdown = false, setDropdown }: DropdownProps): ReactElement => {
   const handleToggle = (): void => {
-    setDropdownIsOpen(false);
+    setDropdown(false);
   };
 
-  console.log(dropdownOpen);
-
   return (
-    <Styled.Dropdown dropdownOpen={dropdownOpen} onClick={handleToggle}>
+    <Styled.Dropdown dropdown={dropdown} onClick={handleToggle}>
       <Styled.WrapperDropdown>
         <div className="nav">
           <ul className="dropdown__menu">
@@ -40,7 +35,8 @@ const Dropdown = ({
               </Link>
             </li>
             <li className="logout">
-              <a onClick={() => {
+              <a
+                onClick={() => {
                   signOut();
                 }}
               >

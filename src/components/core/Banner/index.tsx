@@ -39,8 +39,6 @@ const Banner = () => {
     });
   }, []);
 
-  console.log(movies);
-
   return (
     <Styled.Wrapper>
       <Swiper {...settings} modules={[Autoplay, Pagination]}>
@@ -58,7 +56,7 @@ const Banner = () => {
                 src={`${requests.image_url}${value.backdrop_path}`}
                 alt={value.title}
                 width="1280"
-                height="820"
+                height="880"
               />
             </SwiperSlide>
           );

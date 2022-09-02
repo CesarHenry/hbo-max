@@ -10,6 +10,7 @@ const theme = {
     DARK: '#1A2226',
     GOLD: '#ffbf00',
     GREY: '#6C6C6C',
+    GREY_OPACITY: 'rgba(159, 159, 159, 0.5)',
     LIGHT: '#C8C8C8',
     PINK: '#FC00C4',
     PURPLE: '#9E86FF',

@@ -7,9 +7,11 @@ import 'swiper/css';
 import { Container } from '../../../styles/Grid';
 import Button from '../../core/Button';
 
-import * as Styled from './styles';
+import { useRouter } from 'next/router';
 import instance from '../../../services/api';
 import requests from '../../../services/requests';
+
+import * as Styled from './styles';
 
 const settings: SwiperProps = {
   slidesPerView: 3.5,
@@ -30,13 +32,20 @@ const settings: SwiperProps = {
 const SliderSeries = () => {
   const [series, setSeries] = React.useState([]);
 
+  const router = useRouter();
+
   React.useEffect(() => {
     instance.get(requests.Serie).then((res) => {
       setSeries(res.data.results);
     });
   }, []);
 
-  console.log(series);
+  const handleClick = ({ ...value }) => {
+    return router.push({
+      pathname: '/selected',
+      query: { id: `${value.id}`, page: 'Serie' }
+    });
+  };
 
   return (
     <Container>
@@ -60,7 +69,8 @@ const SliderSeries = () => {
                 <SwiperSlide key={index}>
                   <img
                     src={`${requests.image_url}${value.poster_path}`}
-                    alt="card medium movies"
+                    alt={`card ${value.original_title}`}
+                    onClick={() => handleClick(value)}
                   />
                 </SwiperSlide>
               );

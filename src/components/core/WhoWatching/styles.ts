@@ -96,7 +96,7 @@ export const Wrapper = styled.section`
     }
 
     button:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: ${theme.colors.GREY_OPACITY};
     }
 
     @media (max-width: ${theme.media.MD}) {

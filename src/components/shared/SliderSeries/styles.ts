@@ -13,7 +13,12 @@ export const Wrapper = styled.section`
 
       img {
         border-radius: 5px;
+        cursor: pointer;
       }
+    }
+
+    img:hover {
+      border: 2px solid ${theme.colors.LIGHT};
     }
 
     .information {

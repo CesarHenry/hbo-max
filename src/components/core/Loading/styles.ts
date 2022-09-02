@@ -18,7 +18,7 @@ export const Wrapper = styled.section`
       left: 50%;
       bottom: 10%;
       width: 200px;
-      background: rgba(159, 159, 159, 0.5);
+      background: ${theme.colors.GREY_OPACITY};
       border-radius: 10px;
       margin: -20px 0 0 -100px;
     }
