@@ -1,10 +1,12 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+
 import instance from '../../../services/api';
 import requests, { api_key } from '../../../services/requests';
 
 import * as Styled from './styles';
 import { Container } from '../../../styles/Grid';
+import { RingProgress } from '../../core';
 
 const PosterSelected = () => {
   const [movies, setMovies] = React.useState([]);
@@ -30,6 +32,7 @@ const PosterSelected = () => {
   });
 
   videos.length = 6;
+
   return (
     <Container>
       <Styled.Wrapper>
@@ -59,7 +62,9 @@ const PosterSelected = () => {
                   <h1>Avaliação</h1>
                   <img src="/images/icons/star.svg" alt="icon star" />
                   <div className="container__vote">
-                    <h3>{value.vote_average}</h3>
+                    <RingProgress
+                      percentage={value.vote_average.toFixed() * 10}
+                    />
                   </div>
                 </div>
               </div>

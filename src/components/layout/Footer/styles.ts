@@ -57,20 +57,11 @@ export const Wrapper = styled.footer`
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      height: 130px;
 
-      .github {
-        width: 45px;
-        padding: 5px;
-      }
-
-      .linkedin {
-        width: 65px;
-        padding: 10px;
-      }
-
-      .instagram {
-        width: 60px;
+      img {
+        width: 30px;
       }
     }
 
