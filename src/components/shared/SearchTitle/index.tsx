@@ -46,6 +46,24 @@ const SearchTitle = () => {
     }
   }, [id]);
 
+  console.log('searchid', searchId)
+
+  const handleClick = ({ ...value }) => {
+    console.log(value);
+    return router.push({
+      pathname: '/selected',
+      query: { id: `${value.id}`, page: `Popular` }
+    });
+  };
+
+  const SearchHandleClick = ({ ...value }) => {
+    console.log(value);
+    return router.push({
+      pathname: '/selected',
+      query: { id: `${value.id}`, page: `Search ${search}` }
+    });
+  };
+
   return (
     <Container>
       <Styled.Wrapper>
@@ -67,12 +85,13 @@ const SearchTitle = () => {
             <>
               {searchId.map((value, index) => {
                 return (
-                  <ul>
-                    <li key={index}>
+                  <ul key={index}>
+                    <li>
                       {value.poster_path ? (
                         <img
                           src={`${requests.image_url}${value.poster_path} `}
                           alt={`card ${value.title}`}
+                          onClick={() => SearchHandleClick(value)}
                         />
                       ) : null}
                     </li>
@@ -84,11 +103,12 @@ const SearchTitle = () => {
             <>
               {movies.map((value, index) => {
                 return (
-                  <ul>
-                    <li key={index}>
+                  <ul key={index}>
+                    <li>
                       <img
                         src={`${requests.image_url}${value.poster_path} `}
                         alt={`card ${value.title}`}
+                        onClick={() => handleClick(value)}
                       />
                     </li>
                   </ul>

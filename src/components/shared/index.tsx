@@ -4,6 +4,7 @@ import SliderWeLove from "./SliderWeLove";
 import StarPower from "./StarPower";
 import SearchTitle from "./SearchTitle";
 import SliderSeries from "./SliderSeries";
+import SliderGenres from "./SliderGenres";
 
 export {
   SliderTrending,
@@ -12,4 +13,5 @@ export {
   StarPower,
   SearchTitle,
   SliderSeries,
+  SliderGenres
 }

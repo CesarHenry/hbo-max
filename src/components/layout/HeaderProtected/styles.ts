@@ -5,7 +5,7 @@ interface SideBarProps {
 }
 
 interface DropdownProps {
-  dropdownOpen: boolean;
+  dropdown: boolean;
 }
 
 export const Wrapper = styled.header`
@@ -180,12 +180,12 @@ export const Backdrop = styled.div<SideBarProps>`
 `;
 
 export const Dropdown = styled.div<DropdownProps>`
-  ${({ dropdownOpen }) => css`
+  ${({ dropdown }) => css`
     visibility: hidden;
     opacity: 0;
     z-index: 9999;
 
-    ${dropdownOpen && 'opacity: 1; visibility: visible;'}
+    ${dropdown && 'opacity: 1; visibility: visible;'}
   `}
 `;
 

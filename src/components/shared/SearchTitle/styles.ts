@@ -53,6 +53,11 @@ export const Wrapper = styled.section`
 
         img {
           width: 200px;
+          cursor: pointer;
+        }
+
+        img:hover {
+          border: 2px solid ${theme.colors.LIGHT};
         }
       }
     }

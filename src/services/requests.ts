@@ -16,8 +16,8 @@ export default {
   Animation: `/discover/movie?api_key=${api_key}&with_genres=16`,
   Tv: `/discover/movie?api_key=${api_key}&with_genres=10770`,
   Serie: `/tv/top_rated?api_key=${api_key}&language=pt-BR&page=${number}`,
-  Star: `/tv/1399/credits?api_key=${api_key}&language=en-US`,
   Search: `/search/movie?api_key=${api_key}&query=`,
   Popular: `/movie/popular?api_key=${api_key}&language=pt-BR&page=${number}`,
-  NowPlaying: `/movie/now_playing?api_key=${api_key}&language=en-US&page=2`
+  NowPlaying: `/movie/now_playing?api_key=${api_key}&language=en-US&page=1`,
+  Persons: `person/popular?api_key=${api_key}&language=en-US&page=${number}`
 };
