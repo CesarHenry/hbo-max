@@ -46,12 +46,10 @@ const SearchTitle = () => {
     }
   }, [id]);
 
-  console.log('searchid', searchId)
-
   const handleClick = ({ ...value }) => {
     console.log(value);
     return router.push({
-      pathname: '/selected',
+      pathname: '/cine-selected',
       query: { id: `${value.id}`, page: `Popular` }
     });
   };
@@ -59,7 +57,7 @@ const SearchTitle = () => {
   const SearchHandleClick = ({ ...value }) => {
     console.log(value);
     return router.push({
-      pathname: '/selected',
+      pathname: '/cine-selected',
       query: { id: `${value.id}`, page: `Search ${search}` }
     });
   };

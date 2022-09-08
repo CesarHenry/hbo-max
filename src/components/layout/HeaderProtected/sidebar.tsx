@@ -26,12 +26,12 @@ const SideBar = ({ isOpen = false, setIsOpen }: SideBarProps): ReactElement => {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/serie-acclaimed">
                 <a>Séries</a>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/movie-acclaimed">
                 <a>Filmes</a>
               </Link>
             </li>

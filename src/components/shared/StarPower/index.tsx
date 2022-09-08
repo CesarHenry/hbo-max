@@ -39,9 +39,10 @@ const StarPower = () => {
   }, []);
 
   const handleClick = ({ ...value }) => {
+    console.log(value);
     return router.push({
-      pathname: '/selected',
-      query: { id: `${value.id}`, page: 'TopRated' }
+      pathname: '/star-selected',
+      query: { id: `${value.id}`, page: 'Persons' }
     });
   };
   return (
@@ -58,11 +59,11 @@ const StarPower = () => {
                       className="effect"
                       src="images/effect_card.png"
                       alt="effect card"
+                      onClick={() => handleClick(value)}
                     />
                     <img
                       src={`${requests.image_url}${value.profile_path}`}
                       alt={`card ${value.name}`}
-                      onClick={() => handleClick(value)}
                     />
                     <div className="title">
                       <h2>Featuring</h2>

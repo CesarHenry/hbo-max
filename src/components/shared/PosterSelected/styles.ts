@@ -90,6 +90,13 @@ export const Wrapper = styled.section`
       padding: 30px 0;
     }
 
+    .series {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 10px;
+    }
+
     @media (max-width: ${theme.media.MD}) {
       .content {
         width: 100%;

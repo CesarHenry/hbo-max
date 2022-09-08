@@ -42,7 +42,7 @@ const SliderSeries = () => {
 
   const handleClick = ({ ...value }) => {
     return router.push({
-      pathname: '/selected',
+      pathname: '/cine-selected',
       query: { id: `${value.id}`, page: 'Serie' }
     });
   };
@@ -59,7 +59,7 @@ const SliderSeries = () => {
               Seus programas favoritos, personagens amados e histórias
               inesquecíveis.
             </p>
-            <Button>
+            <Button href="/serie-acclaimed">
               <label>Navegar</label>
             </Button>
           </div>

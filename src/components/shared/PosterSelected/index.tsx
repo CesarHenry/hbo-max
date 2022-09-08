@@ -11,10 +11,12 @@ import { RingProgress } from '../../core';
 const PosterSelected = () => {
   const [movies, setMovies] = React.useState([]);
   const [videos, setVideos] = React.useState([]);
+  const [series, setSeries] = React.useState([]);
 
   const router = useRouter();
   const { id, page } = router.query;
   const video = `/movie/${id}/videos?api_key=${api_key}&language=en-US`;
+  const serie = `/tv/${id}/videos?api_key=${api_key}&language=en-US`;
 
   React.useEffect(() => {
     instance.get(requests[String(page)]).then((res) => {
@@ -23,16 +25,17 @@ const PosterSelected = () => {
     instance.get(video).then((res) => {
       setVideos(res.data.results);
     });
+    instance.get(serie).then((res) => {
+      setSeries(res.data.results);
+    });
   }, []);
-
-  console.log(movies);
 
   const filtered = movies?.filter((item) => {
     return item.id === Number(id);
   });
 
   videos.length = 6;
-
+  series.length = 6;
   return (
     <Container>
       <Styled.Wrapper>
@@ -47,12 +50,17 @@ const PosterSelected = () => {
               </div>
               <div className="infos">
                 <div className="title">
-                  <h1>{value.title}</h1>
+                  <h1>
+                    {value.title} {value.name}
+                  </h1>
                 </div>
                 <div className="release">
                   <h1>Lançamento</h1>
-                  <h2>{value.release_date}</h2>
-                  <h3>Tipo: {value.media_type}</h3>
+                  <h2>
+                    {value.release_date}
+                    {value.first_air_date}
+                  </h2>
+                  <h3>Tipo: {value.media_type || ' Série'}</h3>
                 </div>
                 <div className="sinopse">
                   <h1>Sinopse</h1>
@@ -73,21 +81,43 @@ const PosterSelected = () => {
         })}
 
         <div className="videos">
-          {videos?.map((value, index) => {
-            return (
-              <div key={index}>
-                <iframe
-                  width="280"
-                  height="240"
-                  src={`https://www.youtube.com/embed/${value.key}`}
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            );
-          })}
+          {videos
+            ? videos.map((value, index) => {
+                return (
+                  <div key={index}>
+                    <iframe
+                      width="280"
+                      height="240"
+                      src={`https://www.youtube.com/embed/${value.key}`}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                );
+              })
+            : null}
+        </div>
+
+        <div className="series">
+          {series
+            ? series.map((value, index) => {
+                return (
+                  <div key={index}>
+                    <iframe
+                      width="280"
+                      height="240"
+                      src={`https://www.youtube.com/embed/${value.key}`}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                );
+              })
+            : null}
         </div>
       </Styled.Wrapper>
     </Container>

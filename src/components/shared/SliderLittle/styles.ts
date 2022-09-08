@@ -20,7 +20,7 @@ export const Wrapper = styled.section`
     }
 
     img:hover {
-      border: 2px solid ${theme.colors.LIGHT};
+      border: 2px solid ${theme.colors.PURPLE};
     }
 
     .swiper-button-next {

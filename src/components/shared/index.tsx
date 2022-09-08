@@ -1,17 +1,21 @@
-import SliderTrending from "./SliderTrending";
-import PosterSelected from "./PosterSelected";
-import SliderWeLove from "./SliderWeLove";
-import StarPower from "./StarPower";
-import SearchTitle from "./SearchTitle";
-import SliderSeries from "./SliderSeries";
-import SliderGenres from "./SliderGenres";
+import SliderWide from './SliderWide';
+import PosterSelected from './PosterSelected';
+import SliderLittle from './SliderLittle';
+import StarPower from './StarPower';
+import SearchTitle from './SearchTitle';
+import SliderSeries from './SliderSeries';
+import TopTen from './TopTen';
+import SectionCinematic from './SectionCinematic';
+import StarPowerSelected from './StarPowerSelected';
 
 export {
-  SliderTrending,
+  SliderWide,
   PosterSelected,
-  SliderWeLove,
+  SliderLittle,
   StarPower,
   SearchTitle,
   SliderSeries,
-  SliderGenres
-}
+  TopTen,
+  SectionCinematic,
+  StarPowerSelected
+};
