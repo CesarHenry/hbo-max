@@ -25,7 +25,7 @@ const Dropdown = ({ dropdown = false, setDropdown }: DropdownProps): ReactElemen
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/protected">
                 <a>Mudar de Perfil</a>
               </Link>
             </li>

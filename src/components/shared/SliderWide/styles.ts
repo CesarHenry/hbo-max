@@ -2,13 +2,12 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
-    color: ${theme.colors.WHITE};
-
     .content {
       width: 100%;
-      margin-top: 30px;
+      padding-top: 50px;
 
       h1 {
+        color: ${theme.colors.WHITE};
         margin-bottom: 10px;
         font-size: 1.2rem;
       }
@@ -20,7 +19,7 @@ export const Wrapper = styled.section`
     }
 
     img:hover {
-      border: 2px solid ${theme.colors.LIGHT};
+      border: 2px solid ${theme.colors.PURPLE};
     }
 
     .swiper-button-next {
@@ -67,15 +66,11 @@ export const Wrapper = styled.section`
     @media (max-width: ${theme.media.MD}) {
       .content {
         width: 100%;
+        margin-top: 30px;
 
         h1 {
           font-size: 1rem;
         }
-      }
-
-      .swiper-button-prev,
-      .swiper-button-next {
-        display: none;
       }
     }
   `}

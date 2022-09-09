@@ -2,24 +2,50 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
-    .content {
-      width: 100%;
-      margin-top: 80px;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+
+    .introduction {
+      width: 65%;
+      color: ${theme.colors.WHITE};
 
       h1 {
-        color: ${theme.colors.WHITE};
-        margin-bottom: 10px;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
       }
 
-      img {
-        border-radius: 5px;
-        cursor: pointer;
+      p {
+        margin: 10px 0;
       }
     }
 
-    img:hover {
-      border: 2px solid ${theme.colors.LIGHT};
+    .card {
+      position: relative;
+      padding: 2px;
+
+      h2 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        top: 0;
+        left: 0;
+        background: ${theme.colors.WHITE};
+        font-size: 1.2rem;
+        border-radius: 3px;
+      }
+
+      img {
+        height: 260px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      img:hover {
+        border: 2px solid ${theme.colors.PINK};
+      }
     }
 
     .swiper-button-next {
@@ -61,17 +87,6 @@ export const Wrapper = styled.section`
     .swiper-button-prev:hover,
     .swiper-button-next:hover {
       background: ${theme.colors.GREY};
-    }
-
-    @media (max-width: ${theme.media.MD}) {
-      .content {
-        width: 100%;
-        margin-top: 30px;
-
-        h1 {
-          font-size: 1rem;
-        }
-      }
     }
   `}
 `;

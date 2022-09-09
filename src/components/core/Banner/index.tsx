@@ -55,7 +55,6 @@ const Banner = () => {
                 className="poster"
                 src={`${requests.image_url}${value.backdrop_path}`}
                 alt={value.title}
-                width="1280"
                 height="880"
               />
             </SwiperSlide>
