@@ -101,6 +101,7 @@ export const Wrapper = styled.section`
       .content {
         width: 100%;
         flex-direction: column;
+        text-align: center;
       }
 
       .poster {

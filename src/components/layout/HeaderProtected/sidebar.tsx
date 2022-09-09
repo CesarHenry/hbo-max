@@ -36,8 +36,8 @@ const SideBar = ({ isOpen = false, setIsOpen }: SideBarProps): ReactElement => {
               </Link>
             </li>
             <li>
-              <Link href="#">
-                <a>Stars Powers</a>
+              <Link href="/search">
+                <a>Pesquisar</a>
               </Link>
             </li>
           </ul>

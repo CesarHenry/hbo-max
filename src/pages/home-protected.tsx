@@ -21,7 +21,7 @@ const HomeProtected = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 3000);
     if (status === 'unauthenticated') router.push('/auth/signin');
   }, [status]);
 
